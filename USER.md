@@ -9,6 +9,16 @@
 - **Preferred shell:** bash (WSL)
 - **Timezone:** America/Los_Angeles (Pacific Time)
 
+## Professional
+
+- **Executive Director**, [The Mars Society](https://www.marssociety.org/) — world's largest space advocacy org
+- **CTO**, [North Bend Digital](https://northbenddigital.com/) — also does Fractional CTO work for clients
+- **Founder**, [Mars Technology Institute](https://marstechnology.institute/)
+- 20+ years at Microsoft as a technical project director
+- Commanded analog missions at Mars Desert Research Station (MDRS)
+- Virtual event production — led conventions with 15,000+ attendees, 100,000+ viewers
+- Personal site: [jamesburk.com](https://jamesburk.com)
+
 ## Preferences
 
 - Prefers concise, direct communication
