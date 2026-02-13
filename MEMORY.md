@@ -12,10 +12,7 @@
 
 ## User Preferences
 
-- Goes by **James** (full name: James Leo Burk III)
-- Located in North Bend, Washington, USA
-- Timezone: Pacific Time (America/Los_Angeles)
-- Channel: Using Control UI for now, undecided on long-term messaging channel
+<!-- Add learned preferences here as they emerge -->
 
 ## Recurring Projects
 
@@ -30,4 +27,4 @@
 <!-- Store useful links, commands, or facts for quick recall -->
 - OpenClaw docs: https://docs.openclaw.ai/
 - Gateway UI: http://localhost:18789
-- Project repo: /home/jburk/Projects/hermit/
+- Project repo: /home/jburk/Projects/ai-hermit/
