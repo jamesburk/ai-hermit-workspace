@@ -1,36 +1,41 @@
-# Hermit — Tool Usage Guide
+# Tool Notes
 
-## File Operations
+## exec (shell)
 
-- Use workspace-relative paths by default. The workspace is the default working directory.
-- For operations outside the workspace, use absolute paths and confirm with the user first.
-- Prefer reading before writing — understand existing content before modifying files.
+WSL2 Ubuntu on Polaris. Useful commands:
 
-## Memory Tools
+### Local Operations
+- ollama list / ollama ps -- installed and running models
+- nvidia-smi -- GPU temp and VRAM usage
+- openclaw status -- gateway health
+- openclaw gateway restart -- restart after config changes
+- docker ps | grep openclaw -- container status
 
-- `memory_search` — Semantic search across memory files. Use when recalling older context.
-- `memory_get` — Read a specific memory file by path. Use for targeted lookups.
-- Write memory via standard file tools to `memory/YYYY-MM-DD.md` or `MEMORY.md`.
+### Dev Tools
+- git, node, pnpm, bun -- available in WSL2
+- docker compose -- from /home/jburk/Projects/ai-hermit/openclaw/
 
-## Web & Search
+### Scripts
+- ~/.openclaw/scripts/memory-audit.sh [--verbose] -- full system report
+- ~/.openclaw/scripts/validate-config.mjs -- validate openclaw.json
 
-- Use Brave Search for web lookups when available.
-- Summarize search results rather than dumping raw output.
+### Remote Operations (requires Tailscale)
+- tailscale status -- mesh network state
+- tailscale ping aurora -- check Aurora R9 reachability
+- curl http://aurora:18789/api/health -- Aurora gateway health (when connected)
 
-## Shell / Exec
+## memory_search / memory_get
 
-- All shell commands execute on the WSL Ubuntu host within Docker.
-- Confirm before running destructive commands (`rm`, `docker compose down`, etc.).
-- Prefer non-interactive commands — avoid tools that require stdin interaction.
+- memory_search(query) -- keyword search across all memory files and MEMORY.md
+- memory_get(path) -- read a specific file, e.g. memory/2026-02-24-setup.md
 
-## Skills
+## browser
 
-- Skills load from three locations: bundled > managed (`~/.openclaw/skills`) > workspace (`skills/`).
-- Workspace skills override bundled skills with the same name.
-- Check available skills with `/skills` or the gateway UI.
+Web fetch and page analysis. Use for checking docs, researching solutions, or verifying services.
 
-## General Conventions
+## Conventions
 
-- When producing code, match the style and conventions of the existing codebase.
-- For multi-step tasks, outline the plan before executing.
-- If a tool call fails, diagnose before retrying — don't brute force.
+- Match codebase style and conventions when producing code
+- For multi-step tasks, outline the plan before executing
+- If a tool call fails, diagnose before retrying -- don't brute force
+- Prefer reading code before modifying -- understand context first

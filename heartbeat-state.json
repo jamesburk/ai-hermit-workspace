@@ -1,0 +1,13 @@
+{
+  "lastCheck": null,
+  "lastSuccess": null,
+  "lastFailure": null,
+  "consecutiveFailures": 0,
+  "checks": {
+    "ollama": { "status": "unknown", "lastChecked": null },
+    "gateway": { "status": "unknown", "lastChecked": null },
+    "gpu": { "status": "unknown", "lastChecked": null, "tempC": null, "vramMiB": null },
+    "disk": { "status": "unknown", "lastChecked": null, "usagePercent": null },
+    "tailscale": { "status": "unknown", "lastChecked": null, "auroraReachable": null }
+  }
+}
